@@ -16,6 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+    
+
       - name: Set up SSH key
         run: |
           mkdir -p ~/.ssh
@@ -29,7 +31,7 @@ jobs:
             echo "SSH Connection successful" &&
             sudo rm -rf * &&
             git clone https://github.com/giovannipajeu1/conversao-temperatura.git &&
-            cd conversao-temperatura &&
+            cd conversao-temperatura/src &&
             docker build -t conversao-temperatura/conversao:1.0 . &&
             docker run -d -p 8080:8080 conversao-temperatura/conversao:1.0
           '
