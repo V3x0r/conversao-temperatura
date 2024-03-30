@@ -18,7 +18,6 @@ jobs:
 
       - name: SSH Connection
         run: |
-          chmod 600 $SSH_KEY
           ssh -i $SSH_KEY ec2-user@44.193.83.68 "echo 'SSH Connection successful'"
 
       - name: Build Docker 
