@@ -33,5 +33,5 @@ jobs:
             git clone https://github.com/giovannipajeu1/conversao-temperatura.git &&
             cd conversao-temperatura/src &&
             sudo npm ci &&
-            sudo npm start server.js 
+            sudo npm start server.js &
           '
