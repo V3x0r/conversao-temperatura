@@ -28,6 +28,7 @@ jobs:
           ssh -i ~/.ssh/id_rsa ec2-user@44.193.83.68 '
             echo "SSH Connection successful" &&
             git clone https://github.com/giovannipajeu1/conversao-temperatura.git &&
+            cd conversao-temperatura &&
             docker build -t conversao-temperatura/conversao:1.0 . &&
             docker run -d -p 8080:8080 conversao-temperatura/conversao:1.0
           '
