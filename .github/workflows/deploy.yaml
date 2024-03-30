@@ -32,6 +32,6 @@ jobs:
             sudo rm -rf * &&
             git clone https://github.com/giovannipajeu1/conversao-temperatura.git &&
             cd conversao-temperatura/src &&
-            docker build -t conversao-temperatura/conversao:1.0 . &&
-            docker run -d -p 80:80 conversao-temperatura/conversao:1.0
+            sudo npm ci &&
+            sudo npm start server.js 
           '
