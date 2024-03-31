@@ -23,11 +23,11 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_KEY" > ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
-          ssh-keyscan -H 44.193.83.68 >> ~/.ssh/known_hosts
+          ssh-keyscan -H 34.233.125.101 >> ~/.ssh/known_hosts
 
       - name: SSH Connection and Deploy
         run: |
-          ssh -i ~/.ssh/id_rsa ec2-user@44.193.83.68 '
+          ssh -i ~/.ssh/id_rsa ec2-user@34.233.125.101 '
             echo "SSH Connection successful" &&
             sudo rm -rf * &&
             git clone https://github.com/giovannipajeu1/conversao-temperatura.git &&
