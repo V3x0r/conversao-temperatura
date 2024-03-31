@@ -33,6 +33,7 @@ jobs:
             sudo rm -rf * &&
             git clone https://github.com/giovannipajeu1/conversao-temperatura.git &&
             cd conversao-temperatura/src &&
+            sudo yum install nodejs -y
             sudo npm ci &&
             sudo npm start server.js &
           '
