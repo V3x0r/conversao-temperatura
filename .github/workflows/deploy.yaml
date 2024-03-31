@@ -29,6 +29,7 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_rsa ec2-user@34.233.125.101 '
             echo "SSH Connection successful" &&
+            sudo yum install git -y 
             sudo rm -rf * &&
             git clone https://github.com/giovannipajeu1/conversao-temperatura.git &&
             cd conversao-temperatura/src &&
